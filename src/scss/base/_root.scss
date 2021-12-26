@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+:root {
+  // COLORS
+  @each $type, $values in $colors {
+    @each $prop, $val in $values {
+      --color-#{$type}-#{$prop}: #{$val};
+    }
+  }
+
+  // FONT FAMILIES
+  --font-family-body: #{$font-family-body};
+
+  // FONT SIZES
+  @each $screen-size, $font-size in $font-sizes {
+    @if $screen-size == phone {
+      @each $prop, $val in $font-size {
+        --font-size-#{$prop}: #{$val};
+      }
+    } @else if $screen-size == tablet {
+      @include mq(tablet) {
+        @each $prop, $val in $font-size {
+          --font-size-#{$prop}: #{$val};
+        }
+      }
+    }
+  }
+
+  // FONT WEIGHTS
+  --font-weight-body: #{$font-weight-body};
+  --font-weight-bold: #{$font-weight-bold};
+
+  // LINE HEIGHTS
+  @each $prop, $val in $line-heights {
+    --line-height-#{$prop}: #{$val};
+  }
+
+  // SPACE
+  @each $prop, $val in $space {
+    --space-#{$prop}: #{$val};
+  }
+}
