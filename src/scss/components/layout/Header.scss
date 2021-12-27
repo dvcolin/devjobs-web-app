@@ -1,0 +1,13 @@
+@use "../../abstracts" as *;
+
+.header {
+  min-height: 13.6rem;
+  background-image: url(../../../assets/mobile/bg-pattern-header.svg);
+  background-size: cover;
+  background-position: center;
+
+  &__container {
+    @include container-styles;
+    padding-top: var(--space-8);
+  }
+}

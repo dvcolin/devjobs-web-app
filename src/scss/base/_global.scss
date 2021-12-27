@@ -6,6 +6,8 @@ body {
   box-sizing: border-box;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
   background-color: var(--color-secondary-lightGray);
-  color: var(--color-secondary-darkGray);
+  color: var(--color-primary-veryDarkBlue);
 }

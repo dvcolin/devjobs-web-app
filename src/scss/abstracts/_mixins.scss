@@ -1,3 +1,4 @@
+// MEDIA QUERY
 @mixin mq($breakpoint) {
   @if $breakpoint == tablet {
     @media only screen and (min-width: 48em) {
@@ -9,4 +10,14 @@
       @content;
     }
   }
+}
+
+// COMPONENT STYLES
+@mixin container-styles {
+  padding: 0 var(--space-6);
+}
+
+@mixin grid-styles {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
