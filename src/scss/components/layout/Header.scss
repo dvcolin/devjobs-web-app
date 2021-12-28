@@ -8,6 +8,8 @@
 
   &__container {
     @include container-styles;
+    display: flex;
+    justify-content: space-between;
     padding-top: var(--space-8);
   }
 }

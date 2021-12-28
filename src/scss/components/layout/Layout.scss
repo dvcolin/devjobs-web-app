@@ -1,0 +1,12 @@
+.layout {
+  min-height: 100vh;
+  &--light {
+    background-color: var(--color-secondary-lightGray);
+    color: var(--color-primary-veryDarkBlue);
+  }
+
+  &--dark {
+    background-color: var(--color-primary-midnight);
+    color: var(--color-secondary-gray);
+  }
+}

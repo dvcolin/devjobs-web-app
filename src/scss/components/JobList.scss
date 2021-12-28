@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.job-list {
+  @include container-styles;
+  @include grid-styles;
+  row-gap: var(--space-12);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-8);
+}

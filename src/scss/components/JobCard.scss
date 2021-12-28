@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.job-card {
+  position: relative;
+  grid-column: 1 / -1;
+  padding: 0 var(--space-4);
+  border-radius: 0.6rem;
+
+  &--light {
+    background-color: var(--color-secondary-white);
+  }
+
+  &--dark {
+    background-color: var(--color-primary-veryDarkBlue);
+  }
+
+  &__content {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-8);
+    color: var(--color-secondary-darkGray);
+  }
+
+  &__logo-box {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    transform: translateY(-50%);
+  }
+
+  &__position {
+    @include heading-styles(h3);
+    margin-top: var(--space-2);
+  }
+
+  &__company {
+    margin-top: var(--space-2);
+  }
+
+  &__location {
+    @include heading-styles(h4);
+    margin-top: var(--space-7);
+  }
+}

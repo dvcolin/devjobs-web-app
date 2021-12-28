@@ -21,3 +21,36 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+
+@mixin heading-styles($variant) {
+  font-weight: var(--font-weight-bold);
+
+  &--light {
+    color: var(--color-primary-midnight);
+  }
+
+  &--dark {
+    color: var(--color-secondary-white);
+  }
+
+  @if $variant == h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+  }
+
+  @if $variant == h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+  }
+
+  @if $variant == h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+  }
+
+  @if $variant == h4 {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-primary-violet);
+  }
+}
