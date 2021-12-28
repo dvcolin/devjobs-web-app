@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
-:root {
+:root,
+:root[data-theme="light"] {
   // COLORS
   --color-primary: #{$color-primary-violet};
   --color-primary-light: #{$color-primary-lightViolet};
@@ -9,15 +10,9 @@
   --color-text-secondary: #{$color-secondary-darkGray};
   --color-heading: #{$color-primary-midnight};
   --color-component-background: #{$color-secondary-white};
+}
 
-  &[data-theme="light"] {
-    --color-background: #{$color-secondary-lightGray};
-    --color-text-primary: #{$color-secondary-darkGray};
-    --color-text-secondary: #{$color-secondary-darkGray};
-    --color-heading: #{$color-primary-midnight};
-    --color-component-background: #{$color-secondary-white};
-  }
-
+:root {
   &[data-theme="dark"] {
     --color-background: #{$color-primary-midnight};
     --color-text-primary: #{$color-secondary-lightGray};
