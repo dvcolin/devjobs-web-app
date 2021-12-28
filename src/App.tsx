@@ -1,7 +1,8 @@
 import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import JobList from "./components/JobList";
-import data from "./data.json";
+import HomePage from "./pages/HomePage";
+import JobPage from "./pages/JobPage";
 
 const App = () => {
   useEffect(() => {
@@ -16,7 +17,10 @@ const App = () => {
 
   return (
     <Layout>
-      <JobList jobs={data} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:id" element={<JobPage />} />
+      </Routes>
     </Layout>
   );
 };

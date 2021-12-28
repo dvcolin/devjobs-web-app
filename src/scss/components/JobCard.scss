@@ -7,6 +7,14 @@
   border-radius: 0.6rem;
   background-color: var(--color-component-background);
 
+  @include mq(tablet) {
+    grid-column: span 6;
+  }
+
+  @include mq(desktop) {
+    grid-column: span 4;
+  }
+
   &__content {
     padding-top: var(--space-10);
     padding-bottom: var(--space-8);
@@ -27,6 +35,11 @@
   &__position {
     @include heading-styles(h3);
     margin-top: var(--space-2);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
   }
 
   &__company {

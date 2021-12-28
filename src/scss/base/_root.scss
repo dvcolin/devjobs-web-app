@@ -10,6 +10,9 @@
   --color-text-secondary: #{$color-secondary-darkGray};
   --color-heading: #{$color-primary-midnight};
   --color-component-background: #{$color-secondary-white};
+  --color-primary-button-background: #{$color-primary-violet};
+  --color-primary-button-background-hover: #{$color-primary-lightViolet};
+  --color-primary-button-text: #{$color-secondary-white};
 }
 
 :root {
