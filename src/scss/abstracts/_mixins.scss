@@ -24,14 +24,7 @@
 
 @mixin heading-styles($variant) {
   font-weight: var(--font-weight-bold);
-
-  &--light {
-    color: var(--color-primary-midnight);
-  }
-
-  &--dark {
-    color: var(--color-secondary-white);
-  }
+  color: var(--color-heading);
 
   @if $variant == h1 {
     font-size: var(--font-size-h1);
@@ -51,6 +44,6 @@
   @if $variant == h4 {
     font-size: var(--font-size-h4);
     line-height: var(--line-height-h4);
-    color: var(--color-primary-violet);
+    color: var(--color-primary);
   }
 }

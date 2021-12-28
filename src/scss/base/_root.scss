@@ -2,10 +2,28 @@
 
 :root {
   // COLORS
-  @each $type, $values in $colors {
-    @each $prop, $val in $values {
-      --color-#{$type}-#{$prop}: #{$val};
-    }
+  --color-primary: #{$color-primary-violet};
+  --color-primary-light: #{$color-primary-lightViolet};
+  --color-background: #{$color-secondary-lightGray};
+  --color-text-primary: #{$color-secondary-darkGray};
+  --color-text-secondary: #{$color-secondary-darkGray};
+  --color-heading: #{$color-primary-midnight};
+  --color-component-background: #{$color-secondary-white};
+
+  &[data-theme="light"] {
+    --color-background: #{$color-secondary-lightGray};
+    --color-text-primary: #{$color-secondary-darkGray};
+    --color-text-secondary: #{$color-secondary-darkGray};
+    --color-heading: #{$color-primary-midnight};
+    --color-component-background: #{$color-secondary-white};
+  }
+
+  &[data-theme="dark"] {
+    --color-background: #{$color-primary-midnight};
+    --color-text-primary: #{$color-secondary-lightGray};
+    --color-text-secondary: #{$color-secondary-darkGray};
+    --color-heading: #{$color-secondary-white};
+    --color-component-background: #{$color-primary-veryDarkBlue};
   }
 
   // FONT FAMILIES

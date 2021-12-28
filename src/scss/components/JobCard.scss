@@ -5,19 +5,12 @@
   grid-column: 1 / -1;
   padding: 0 var(--space-4);
   border-radius: 0.6rem;
-
-  &--light {
-    background-color: var(--color-secondary-white);
-  }
-
-  &--dark {
-    background-color: var(--color-primary-veryDarkBlue);
-  }
+  background-color: var(--color-component-background);
 
   &__content {
     padding-top: var(--space-10);
     padding-bottom: var(--space-8);
-    color: var(--color-secondary-darkGray);
+    color: var(--color-text-secondary);
   }
 
   &__logo-box {
