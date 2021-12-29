@@ -19,3 +19,7 @@ export interface JobType {
     items: string[];
   };
 }
+
+export interface FilterJobsArgs {
+  title: string;
+}
