@@ -83,7 +83,7 @@
   }
 
   &__company-website-link {
-    @include button-styles(primary);
+    @include button-styles(secondary);
     margin-top: var(--space-6);
 
     @include mq(tablet) {
@@ -150,6 +150,7 @@
     @include container-styles;
     max-width: 80rem;
     display: flex;
+    align-items: center;
     padding-top: var(--space-5);
     padding-bottom: var(--space-5);
   }

@@ -13,6 +13,9 @@
   --color-primary-button-background: #{$color-primary-violet};
   --color-primary-button-background-hover: #{$color-primary-lightViolet};
   --color-primary-button-text: #{$color-secondary-white};
+  --color-secondary-button-background: #{$color-secondary-button-background-light};
+  --color-secondary-button-background-hover: #{$color-secondary-button-background-hover-light};
+  --color-secondary-button-text: #{$color-primary-violet};
 }
 
 :root {
@@ -22,6 +25,9 @@
     --color-text-secondary: #{$color-secondary-darkGray};
     --color-heading: #{$color-secondary-white};
     --color-component-background: #{$color-primary-veryDarkBlue};
+    --color-secondary-button-background: #{$color-secondary-button-background-dark};
+    --color-secondary-button-background-hover: #{$color-secondary-button-background-hover-dark};
+    --color-secondary-button-text: #{$color-secondary-white};
   }
 
   // FONT FAMILIES

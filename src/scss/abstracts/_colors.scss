@@ -6,3 +6,13 @@ $color-secondary-white: #ffffff;
 $color-secondary-lightGray: #f4f6f8;
 $color-secondary-gray: #9daec2;
 $color-secondary-darkGray: #6e8098;
+$color-secondary-button-background-light: rgba($color-primary-violet, 0.1);
+$color-secondary-button-background-hover-light: rgba(
+  $color-primary-violet,
+  0.3
+);
+$color-secondary-button-background-dark: rgba($color-secondary-white, 0.05);
+$color-secondary-button-background-hover-dark: rgba(
+  $color-secondary-white,
+  0.2
+);
