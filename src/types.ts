@@ -14,4 +14,8 @@ export interface JobType {
     content: string;
     items: string[];
   };
+  role: {
+    content: string;
+    items: string[];
+  };
 }

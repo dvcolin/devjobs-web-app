@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+
+.job-info-group {
+  margin-top: var(--space-10);
+
+  &__heading {
+    @include heading-styles(h3);
+  }
+
+  &__content {
+    margin-top: var(--space-6);
+  }
+
+  &__items {
+    list-style: none;
+    margin-top: var(--space-8);
+
+    &--ordered {
+      counter-reset: counter;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: var(--space-2);
+    }
+
+    &::before {
+      color: var(--color-primary);
+      font-weight: var(--font-weight-bold);
+      margin-right: var(--space-4);
+    }
+
+    &--unordered {
+      &::before {
+        content: "\2022";
+      }
+    }
+
+    &--ordered {
+      counter-increment: counter;
+      &::before {
+        content: counter(counter);
+      }
+    }
+  }
+}

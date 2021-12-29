@@ -1,0 +1,181 @@
+@use "../abstracts" as *;
+
+.job-page {
+  &__content {
+    @include container-styles;
+    max-width: 80rem;
+  }
+
+  &__company-box {
+    position: relative;
+    background-color: var(--color-component-background);
+    border-radius: 0.6rem;
+    transform: translateY(calc(var(--space-6) * -1));
+  }
+
+  &__company-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-8);
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+
+    @include mq(tablet) {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+
+  &__company-logo-box {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+
+    @include mq(tablet) {
+      position: relative;
+      transform: translateY(0);
+      width: 14rem;
+      height: 14rem;
+      border-radius: 0 0 0 0.6rem;
+    }
+  }
+
+  &__company-logo {
+    @include mq(tablet) {
+      transform: scale(2.5);
+    }
+  }
+
+  &__company-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq(tablet) {
+      flex: 1;
+      flex-direction: row;
+      padding: 0 var(--space-8);
+    }
+  }
+
+  &__company-info {
+    text-align: center;
+
+    @include mq(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__company-name {
+    @include heading-styles(h2);
+  }
+
+  &__company-website {
+    color: var(--color-text-secondary);
+    margin-top: var(--space-2);
+  }
+
+  &__company-website-link {
+    @include button-styles(primary);
+    margin-top: var(--space-6);
+
+    @include mq(tablet) {
+      margin-top: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__job-box {
+    padding: var(--space-8) var(--space-4);
+    background-color: var(--color-component-background);
+    border-radius: 0.6rem;
+
+    @include mq(tablet) {
+      padding: var(--space-8) var(--space-12);
+    }
+  }
+
+  &__job-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__job-details {
+    color: var(--color-text-secondary);
+  }
+
+  &__job-position {
+    @include heading-styles(h1);
+    margin-top: var(--space-1);
+  }
+
+  &__job-location {
+    @include heading-styles(h4);
+    margin-top: var(--space-4);
+  }
+
+  &__apply-button {
+    @include button-styles(primary, full);
+    margin-top: var(--space-12);
+
+    @include mq(tablet) {
+      margin-top: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__job-description {
+    margin-top: var(--space-8);
+  }
+
+  &__footer {
+    margin-top: var(--space-16);
+    background-color: var(--color-component-background);
+  }
+
+  &__footer-content {
+    @include container-styles;
+    max-width: 80rem;
+    display: flex;
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+  }
+
+  &__footer-apply-button {
+    @include button-styles(primary, full);
+
+    @include mq(tablet) {
+      margin-left: auto;
+    }
+  }
+
+  &__footer-job-details {
+    display: none;
+
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+
+  &__footer-position {
+    @include heading-styles(h3);
+  }
+
+  &__footer-company {
+    color: var(--color-text-secondary);
+    margin-top: var(--space-1);
+  }
+}

@@ -24,6 +24,7 @@ const JobList = ({ jobs }: JobListProps) => {
             apply,
             description,
             requirements,
+            role,
           }) => (
             <JobCard
               key={id}
@@ -39,6 +40,7 @@ const JobList = ({ jobs }: JobListProps) => {
               apply={apply}
               description={description}
               requirements={requirements}
+              role={role}
             />
           )
         )}

@@ -15,13 +15,13 @@ const JobCard = ({
   return (
     <div className="job-card">
       <div
-        className="job-card__logo-box"
+        className="job-card__company-logo-box"
         style={{ backgroundColor: logoBackground }}
       >
         <img
           src={`${process.env.PUBLIC_URL}/${logo}`}
           alt={`${company} logo`}
-          className="job-card__logo"
+          className="job-card__company-logo"
         />
       </div>
       <div className="job-card__content">
