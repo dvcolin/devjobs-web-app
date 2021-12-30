@@ -6,6 +6,8 @@
   padding: 0 var(--space-4);
   border-radius: 0.6rem;
   background-color: var(--color-component-background);
+  animation: moveUp 0.5s;
+  backface-visibility: hidden;
 
   @include mq(tablet) {
     grid-column: span 6;

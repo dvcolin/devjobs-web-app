@@ -16,7 +16,7 @@ const JobPage = () => {
   }, [id]);
 
   if (!job) {
-    return <div>Error</div>;
+    return null;
   }
 
   const {
