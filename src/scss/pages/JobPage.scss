@@ -179,4 +179,9 @@
     color: var(--color-text-secondary);
     margin-top: var(--space-1);
   }
+
+  &__spinner-container {
+    @include container-styles;
+    padding: var(--space-8) 0;
+  }
 }

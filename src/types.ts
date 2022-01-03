@@ -20,6 +20,13 @@ export interface JobType {
   };
 }
 
-export interface FilterJobsArgs {
-  title: string;
+export interface SearchFieldsType {
+  queryString: string;
+  location: string;
+  fullTime: boolean;
 }
+
+export type SearchContextType = [
+  SearchFieldsType,
+  (args: SearchFieldsType) => void
+];

@@ -2,12 +2,16 @@
 
 .filter-group {
   @include container-styles;
-  display: flex;
-  align-items: center;
+
   padding: var(--space-5) var(--space-4);
   background-color: var(--color-component-background);
   transform: translateY(-50%);
   border-radius: 0.6rem;
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
 
   &__title-input {
     @include input-styles;

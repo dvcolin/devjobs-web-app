@@ -1,37 +1,48 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "../scss/components/FilterGroup.scss";
 import filterIcon from "../assets/mobile/icon-filter.svg";
 import searchIcon from "../assets/mobile/icon-search.svg";
-import { FilterJobsArgs } from "../types";
+import SearchContext from "../contexts/SearchContext";
 
 interface FilterGroupProps {
-  filterJobs: (args: FilterJobsArgs) => void;
+  filterJobs: () => void;
 }
 
 const FilterGroup = ({ filterJobs }: FilterGroupProps) => {
-  const [title, setTitle] = useState("");
+  const [searchFields, setSearchFields] = useContext(SearchContext);
+  const { queryString } = searchFields;
 
   return (
     <div className="filter-group">
-      <div className="filter-group__title-box">
-        <input
-          className="filter-group__title-input"
-          placeholder="Filter by title..."
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </div>
-      <div className="filter-group__icon-buttons">
-        <button className="filter-group__icon-button filter-group__icon-button--filter">
-          <img src={filterIcon} alt="Filter" />
-        </button>
-        <button
-          className="filter-group__icon-button filter-group__icon-button--search"
-          onClick={() => filterJobs({ title: title })}
-        >
-          <img src={searchIcon} alt="Search" />
-        </button>
-      </div>
+      <form
+        className="filter-group__form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          filterJobs();
+        }}
+      >
+        <div className="filter-group__title-box">
+          <input
+            className="filter-group__title-input"
+            placeholder="Filter by title..."
+            value={queryString}
+            onChange={(e) => {
+              setSearchFields({
+                ...searchFields,
+                queryString: e.target.value,
+              });
+            }}
+          />
+        </div>
+        <div className="filter-group__icon-buttons">
+          <button className="filter-group__icon-button filter-group__icon-button--filter">
+            <img src={filterIcon} alt="Filter" />
+          </button>
+          <button className="filter-group__icon-button filter-group__icon-button--search">
+            <img src={searchIcon} alt="Search" />
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

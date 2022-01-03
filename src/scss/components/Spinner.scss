@@ -1,0 +1,9 @@
+.spinner {
+  border: 0.8rem solid var(--color-component-background);
+  border-top: 0.8rem solid var(--color-primary);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
