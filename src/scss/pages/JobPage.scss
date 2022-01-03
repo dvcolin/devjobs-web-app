@@ -4,6 +4,7 @@
   &__content {
     @include container-styles;
     max-width: 80rem;
+    animation: moveUp 0.4s;
   }
 
   &__company-box {
@@ -96,7 +97,6 @@
     padding: var(--space-8) var(--space-5);
     background-color: var(--color-component-background);
     border-radius: 0.6rem;
-    animation: moveUp 0.4s;
     @include mq(tablet) {
       padding: var(--space-8) var(--space-12);
     }
