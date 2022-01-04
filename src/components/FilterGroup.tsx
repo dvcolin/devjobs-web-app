@@ -37,12 +37,16 @@ const FilterGroup = ({ filterJobs, setModalOpen }: FilterGroupProps) => {
         </div>
         <div className="filter-group__icon-buttons">
           <button
+            type="button"
             className="filter-group__icon-button filter-group__icon-button--filter"
             onClick={() => setModalOpen(true)}
           >
             <img src={filterIcon} alt="Filter" />
           </button>
-          <button className="filter-group__icon-button filter-group__icon-button--search">
+          <button
+            type="submit"
+            className="filter-group__icon-button filter-group__icon-button--search"
+          >
             <img src={searchIcon} alt="Search" />
           </button>
         </div>
