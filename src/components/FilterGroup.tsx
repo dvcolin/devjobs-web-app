@@ -6,9 +6,10 @@ import SearchContext from "../contexts/SearchContext";
 
 interface FilterGroupProps {
   filterJobs: () => void;
+  setModalOpen: (value: boolean) => void;
 }
 
-const FilterGroup = ({ filterJobs }: FilterGroupProps) => {
+const FilterGroup = ({ filterJobs, setModalOpen }: FilterGroupProps) => {
   const [searchFields, setSearchFields] = useContext(SearchContext);
   const { queryString } = searchFields;
 
@@ -35,7 +36,10 @@ const FilterGroup = ({ filterJobs }: FilterGroupProps) => {
           />
         </div>
         <div className="filter-group__icon-buttons">
-          <button className="filter-group__icon-button filter-group__icon-button--filter">
+          <button
+            className="filter-group__icon-button filter-group__icon-button--filter"
+            onClick={() => setModalOpen(true)}
+          >
             <img src={filterIcon} alt="Filter" />
           </button>
           <button className="filter-group__icon-button filter-group__icon-button--search">
