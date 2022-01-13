@@ -47,6 +47,10 @@
     margin: var(--space-6) 0;
   }
 
+  &__full-time-box {
+    @include checkbox-styles;
+  }
+
   &__full-time-label {
     padding: 0 var(--space-6);
     display: flex;

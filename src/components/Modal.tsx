@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "../scss/components/Modal.scss";
 import locationIcon from "../assets/desktop/icon-location.svg";
+import checkIcon from "../assets/desktop/icon-check.svg";
 import SearchContext from "../contexts/SearchContext";
 
 interface ModalProps {
@@ -46,22 +47,31 @@ const Modal = ({ setModalOpen, filterJobs }: ModalProps) => {
               />
             </div>
             <hr className="modal__line" />
-            <label className="modal__full-time-label">
-              <input
-                type="checkbox"
-                className="modal__full-time-input"
-                checked={fullTime}
-                onChange={() => {
-                  setSearchFields({
-                    ...searchFields,
-                    fullTime: !fullTime,
-                  });
-                }}
-              />
-              <span className="modal__full-time-label-text">
-                Full Time Only
-              </span>
-            </label>
+            <div className="modal__full-time-box">
+              <label className="modal__full-time-label">
+                <input
+                  type="checkbox"
+                  className="modal__full-time-input"
+                  checked={fullTime}
+                  onChange={() => {
+                    setSearchFields({
+                      ...searchFields,
+                      fullTime: !fullTime,
+                    });
+                  }}
+                />
+                <span className="checkbox">
+                  <img
+                    className="checkbox-icon"
+                    src={checkIcon}
+                    alt="Check icon"
+                  />
+                </span>
+                <span className="modal__full-time-label-text">
+                  Full Time Only
+                </span>
+              </label>
+            </div>
             <div className="modal__button-container">
               <button className="modal__button" type="submit">
                 Search

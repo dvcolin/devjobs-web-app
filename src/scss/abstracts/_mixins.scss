@@ -130,3 +130,42 @@
     outline: none;
   }
 }
+
+@mixin checkbox-styles {
+  input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+
+    &:hover {
+      ~ .checkbox {
+        background-color: var(--color-secondary-button-background-hover);
+      }
+    }
+
+    &:checked {
+      ~ .checkbox {
+        background-color: var(--color-primary);
+
+        .checkbox-icon {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 0.3rem;
+    background-color: var(--color-secondary-button-background);
+    transition: all 0.15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .checkbox-icon {
+      display: none;
+    }
+  }
+}
