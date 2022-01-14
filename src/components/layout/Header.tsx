@@ -1,16 +1,9 @@
 import { Link } from "react-router-dom";
 import "../../scss/components/layout/Header.scss";
 import logo from "../../assets/desktop/logo.svg";
+import ThemeToggle from "../ThemeToggle";
 
 const Header = () => {
-  const toggleTheme = () => {
-    const root = document.documentElement;
-    const currentTheme = root.getAttribute("data-theme");
-    const theme = currentTheme === "light" ? "dark" : "light";
-
-    root.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  };
   return (
     <header className="header">
       <div className="header__container">
@@ -19,7 +12,7 @@ const Header = () => {
             <img src={logo} alt="devjobs logo" className="header__logo" />
           </Link>
         </div>
-        <button onClick={toggleTheme}>Toggle theme</button>
+        <ThemeToggle />
       </div>
     </header>
   );
