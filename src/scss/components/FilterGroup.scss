@@ -1,20 +1,96 @@
 @use "../abstracts" as *;
 
 .filter-group {
-  @include container-styles;
-
-  padding: var(--space-5) var(--space-4);
   background-color: var(--color-component-background);
   transform: translateY(-50%);
   border-radius: 0.6rem;
+  padding: var(--space-3) var(--space-4);
+
+  @include mq(tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   &__form {
     display: flex;
     align-items: center;
   }
 
-  &__title-input {
+  &__item-box {
+    display: flex;
+    align-items: center;
+
+    @include mq(tablet) {
+      max-width: 30%;
+      padding-top: var(--space-6);
+      padding-bottom: var(--space-6);
+
+      &:not(:nth-of-type(1)) {
+        padding-left: var(--space-4);
+      }
+
+      &:not(:nth-of-type(3)) {
+        border-right: 1px solid var(--color-background);
+      }
+    }
+  }
+
+  &__item-input {
     @include input-styles;
+  }
+
+  &__title-icon {
+    display: none;
+
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+
+  &__location-box {
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
+
+  &__full-time-box {
+    @include checkbox-styles;
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
+
+  &__full-time-label {
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+
+  &__full-time-label-text {
+    font-weight: var(--font-weight-bold);
+    margin-left: var(--space-4);
+    color: var(--color-heading);
+  }
+
+  &__full-time-label-text-only {
+    display: none;
+
+    @include mq(desktop) {
+      display: inline-block;
+    }
+  }
+
+  &__search-button {
+    display: none;
+
+    @include mq(tablet) {
+      @include button-styles(primary);
+      margin-left: auto;
+    }
   }
 
   &__icon-buttons {

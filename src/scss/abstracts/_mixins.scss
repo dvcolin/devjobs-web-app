@@ -125,9 +125,14 @@
   background-color: inherit;
   color: inherit;
   border: none;
+  min-width: 0;
 
   &:focus-visible {
     outline: none;
+  }
+
+  @include mq(tablet) {
+    padding: 0 var(--space-4);
   }
 }
 
