@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "../scss/pages/HomePage.scss";
 import data from "../data.json";
 import JobList from "../components/JobList";
@@ -32,13 +33,21 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="home-page">
-      <FilterGroup filterJobs={filterJobs} setModalOpen={setModalOpen} />
-      <JobList jobs={jobs} />
-      {modalOpen ? (
-        <Modal setModalOpen={setModalOpen} filterJobs={filterJobs} />
-      ) : null}
-    </div>
+    <>
+      <Helmet>
+        <title>
+          Devjobs | The best place to find front end, back end, and full stack
+          developer jobs
+        </title>
+      </Helmet>
+      <div className="home-page">
+        <FilterGroup filterJobs={filterJobs} setModalOpen={setModalOpen} />
+        <JobList jobs={jobs} />
+        {modalOpen ? (
+          <Modal setModalOpen={setModalOpen} filterJobs={filterJobs} />
+        ) : null}
+      </div>
+    </>
   );
 };
 

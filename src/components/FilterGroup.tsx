@@ -86,7 +86,9 @@ const FilterGroup = ({ filterJobs, setModalOpen }: FilterGroupProps) => {
           </label>
         </div>
 
-        <button className="filter-group__search-button">Search</button>
+        <button className="filter-group__search-button" type="submit">
+          Search
+        </button>
 
         <div className="filter-group__icon-buttons">
           <button

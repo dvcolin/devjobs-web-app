@@ -1,6 +1,7 @@
-import "../scss/pages/JobPage.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import "../scss/pages/JobPage.scss";
 import JobInfoGroup from "../components/JobInfoGroup";
 import ScrollToTop from "../components/util/ScrollToTop";
 import Spinner from "../components/Spinner";
@@ -24,6 +25,11 @@ const JobPage = () => {
       <div className="job-page">
         {job ? (
           <>
+            <Helmet>
+              <title>
+                {job.position} - {job.company} | Devjobs
+              </title>
+            </Helmet>
             <div className="job-page__content">
               <div className="job-page__company-box">
                 <div className="job-page__company-box-content">
